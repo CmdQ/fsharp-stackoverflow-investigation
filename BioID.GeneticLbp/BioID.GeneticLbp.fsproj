@@ -66,29 +66,12 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Kiss.fs" />
-    <Compile Include="Types.fs" />
-    <Compile Include="Extensions.fs" />
-    <Compile Include="Universe.fs" />
-    <Compile Include="SafeNativeMethods.fs" />
-    <Compile Include="CommandLine.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
-    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FSharp.Configuration">
-      <HintPath>C:\Users\tobias.becker\Desktop\example\sso\packages\FSharp.Configuration.0.5.12\lib\net40\FSharp.Configuration.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="OtherStuff">
-      <HintPath>OtherStuff.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpYaml">
-      <HintPath>C:\Users\tobias.becker\Desktop\example\sso\packages\FSharp.Configuration.0.5.12\lib\net40\SharpYaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
