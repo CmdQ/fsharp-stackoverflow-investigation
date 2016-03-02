@@ -203,7 +203,11 @@ type Universe(train:obj[], test:obj[], ?laws) =
                 if pleaseStop.WaitOne 0 then alive else
 
                 // Then we need lots of new ones for the next generation.
+#if SSO_HERE
+                breedPopulation alive |> simulate (generation + 1) lastTime ewma
+#else
                 simulate (generation + 1) lastTime ewma (breedPopulation alive)
+#endif
 
             // Kickstart with some valid ones.
             match x.Population with
