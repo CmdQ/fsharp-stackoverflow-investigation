@@ -45,7 +45,7 @@ let main argv =
         }
 
         // As this is really a heavy-duty, long-running task, I'd rather have a regular thread.
-        let mainComputation = Thread(ParameterizedThreadStart(universe.Simulate))
+        let mainComputation = Thread(ParameterizedThreadStart(universe.Simulate), 16 * 1024 * 1024)
         mainComputation.Start(terminationRequested)
         assert(not mainComputation.IsBackground)
 
